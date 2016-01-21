@@ -2,8 +2,12 @@
     <div class='text'>IGRC Consulting</div>
     <div class='subtext'>Logo here?</div>
 </a>
+
 <ul class="menu">
-    <ng-repeat>
-        
-    </ng-repeat>
+    <li class='menu-item'
+    ng-class='{active: isActive(page)}'
+    ng-repeat='page in pages track by $index'
+    ng-click='redirect(page)'>
+        <span>{{page}}</span>
+    </li>
 </ul>

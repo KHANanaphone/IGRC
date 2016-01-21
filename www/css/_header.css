@@ -3,12 +3,54 @@
     font-family: 'Arimo', sans-serif;
     background-color: #222;
     width: 100%;
+    position: relative;
+    border-bottom: 3px solid #AAA;
+    padding-bottom: 2px;
+}
+
+#header .menu{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+#header .menu-item {
     color: white;
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 0em 1em;
+    cursor: pointer;
+}
+
+#header .menu-item span{
+
+    transition: color ease 0.2s, border-color ease 0.2s;
+    padding-bottom: 0.2em
+}
+
+#header .menu-item:hover span{
+
+    border-bottom-color: #BFB !important;
+    color: #BFB;
+}
+
+#header .menu-item.active span{
+
+    border-bottom: 1px solid #FFF;
 }
 
 #header .title{
+
     padding: 1.5em;
-    display: block;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: background-color ease 0.5s;
+}
+
+#header .title:hover{
+
+    background-color: #444;
 }
 
 #header .text{
