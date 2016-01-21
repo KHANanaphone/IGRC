@@ -1,13 +1,10 @@
 var gulp = require('gulp')
 , inject = require('gulp-inject')
-, wiredep = require('wiredep')
 , nodemon = require('gulp-nodemon');
 
 gulp.task('injectfiles', function() {
 
-    var targetUrl = './www/index.html';
-    wiredep({src: targetUrl});
-
+    var targetUrl = './www/index.html';    
     var target = gulp.src(targetUrl);
     var sources = gulp.src(['./www/js/**/*.js', './www/css/**/*.css'], {read: false});
 

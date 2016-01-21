@@ -1,0 +1,23 @@
+{
+  "name": "igrc",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Adan Ferguson <adanferguson@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+],
+  "install": {
+    "path": "www/js/components"
+  }
+}
