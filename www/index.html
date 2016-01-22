@@ -5,6 +5,7 @@
     <title>IGRC Consulting Corp.</title>
 
     <!-- inject:css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/_header.css">
     <!-- endinject -->
@@ -13,7 +14,7 @@
 
 <body>
 
-    <div ng-controller='igrcController' class='container-fluid'>
+    <div ng-controller='igrcController'>
 
         <div id="header" ng-include='"pages/_header.html"'>
         </div>
@@ -22,10 +23,9 @@
     </div>
 
     <!-- inject:js -->
-    <script src="/js/components/jquery/jquery.js"></script>
     <script src="/js/components/angular/angular.js"></script>
-    <script src="/js/components/bootstrap/bootstrap.js"></script>
     <script src="/js/components/angular-route/angular-route.js"></script>
+    <script src="/js/components/ui-bootstrap-tpls-1.1.0.min.js"></script>
     <script src="/js/app/app.js"></script>
     <!-- endinject -->
 

@@ -8,7 +8,7 @@ gulp.task('injectfiles', function() {
     var targetUrl = './www/index.html';
     var target = gulp.src(targetUrl);
 
-    var prereqs = ['./www/js/components/jquery/jquery.js'];
+    var prereqs = ['./www/js/components/angular/angular.js','./www/js/components/angular-route/angular-route.js'];
     var components = ['./www/js/components/**/*.js'];
     var apps = ['./www/js/app/**/*.js', './www/css/**/*.css']
 

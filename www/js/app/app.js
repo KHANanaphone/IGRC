@@ -1,19 +1,40 @@
 var app = angular.module('igrcApp', [
-  'ngRoute'
+  'ngRoute', 'ui.bootstrap'
 ]);
+
+app.pages = [
+    {name: 'Home', url: '', html: 'home.html'},
+    {group: 'About', subpages: [
+        {name: 'About Us', url: 'about', html: 'about.html'},
+        {name: 'Solutions', url: 'solutions', html: 'solutions.html'},
+        {name: 'Consultancy', url: 'consultancy', html: 'consultancy.html'},
+    ]},
+    {name: 'Contact Us', url: 'contact', html: 'contact.html'}
+]
 
 app.config(['$routeProvider', function($routeProvider){
 
-    $routeProvider
-        .when('/about', {
-            templateUrl: 'pages/about.html'
-        })
-        .when('/', {
-            templateUrl: 'pages/home.html'
-        })
-        .otherwise({
-            redirectTo: '/'
+    for(var i = 0; i < app.pages.length; i++){
+
+        var page = app.pages[i];
+
+        if(page.group)
+            for(var j = 0; j < page.subpages.length; j++)
+                addWhen(page.subpages[j]);
+        else
+            addWhen(page);
+    }
+
+    $routeProvider.otherwise({
+        redirectTo: '/'
+    });
+
+    function addWhen(page){
+
+        $routeProvider.when('/' + page.url, {
+            templateUrl: 'pages/' + page.html
         });
+    };
 }]);
 
 app.controller('igrcController', ['$scope', '$location', function($scope, $location){
@@ -23,21 +44,26 @@ app.controller('igrcController', ['$scope', '$location', function($scope, $locat
         $location.url('/' + page);
     };
 
-    $scope.pages = [
-        'home',
-        'about'
-    ];
+    $scope.pages = app.pages;
 
     $scope.isActive = function(page){
 
         var path = $location.path();
 
-        if(path.substr(1, page.length + 1) === page)
+        if(areEqual(page, path))
             return true;
-        else if(path == '/' && page == 'home')
-            return true;
-        else
-            return false;
+        else if(page.subpages)
+            for(var i = 0; i < page.subpages.length; i++)
+                if(areEqual(page.subpages[i], path))
+                    return true;
+
+        return false;
+
+        function areEqual(page, path){
+            return page.name && path.substr(1, page.url.length + 1) === page.url
+        }
     };
+
+    $scope.isArray = angular.isArray;
 
 }]);

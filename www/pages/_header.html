@@ -5,9 +5,28 @@
 
 <ul class="menu">
     <li class='menu-item'
-    ng-class='{active: isActive(page)}'
-    ng-repeat='page in pages track by $index'
-    ng-click='redirect(page)'>
-        <span>{{page}}</span>
+        ng-repeat='page in pages track by $index'
+        ng-class='{active: isActive(page)}'
+        ng-click='page.url || page.url == "" ? redirect(page.url) : null'>
+
+        <span ng-if='page.name' >
+            {{page.name}}
+        </span>
+        <div ng-if='page.group' uib-dropdown>
+
+            <span ng-class='{active: isActive(page)}'>
+                {{page.group}}
+            </span>
+            <ul class='submenu' uib-dropdown-menu>
+                <li ng-repeat='subpage in page.subpages track by $index'
+                    class='submenu-item'
+                     ng-class='{active: isActive(subpage)}'
+                     ng-click='redirect(subpage.url)'>
+                    <span >
+                        {{subpage.name}}
+                    </span>
+                </li>
+            </ul>
+        </div>
     </li>
 </ul>
