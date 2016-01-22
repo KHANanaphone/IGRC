@@ -6,22 +6,22 @@
 <ul class="menu">
     <li class='menu-item'
         ng-repeat='page in pages track by $index'
-        ng-class='{active: isActive(page)}'
-        ng-click='page.url || page.url == "" ? redirect(page.url) : null'>
+        ng-class='{active: isActive(page)}'>
 
-        <span ng-if='page.name' >
+        <span ng-if='!page.subpages'
+            ng-click='redirect(page.url)'>
             {{page.name}}
         </span>
-        <div ng-if='page.group' uib-dropdown>
+        <div ng-if='page.subpages' uib-dropdown>
 
-            <span ng-class='{active: isActive(page)}'>
-                {{page.group}}
+            <span ng-class='{active: isActive(page)}'
+                ng-click='redirect(page.url)'>
+                {{page.name}}
             </span>
             <ul class='submenu' uib-dropdown-menu>
                 <li ng-repeat='subpage in page.subpages track by $index'
                     class='submenu-item'
-                     ng-class='{active: isActive(subpage)}'
-                     ng-click='redirect(subpage.url)'>
+                    ng-click='redirect(page.url + "#" + subpage.url)'>
                     <span >
                         {{subpage.name}}
                     </span>

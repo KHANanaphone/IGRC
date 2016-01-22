@@ -16,16 +16,17 @@
 
 #header .menu-item {
     color: white;
-    font-size: 1.5em;
+    font-size: 1.3em;
     display: inline-block;
-    padding: 0.3em 1em;
     cursor: pointer;
-}
-
-#header .menu-item{
-
     transition: background-color ease 0.2s,  color ease 0.2s;
     padding-bottom: 0.2em
+}
+
+#header .menu-item span{
+
+    display: inline-block;
+    padding: 0.3em 1em;
 }
 
 #header .menu-item:hover,
@@ -44,7 +45,8 @@
 #header .submenu:hover{
 
     opacity: 1;
-    top: 22px;
+    top: 27px;
+    min-width: 220px;
 }
 
 #header .menu-item .submenu{
@@ -53,21 +55,21 @@
     color: white;
     border: none;
     border-radius: 0px;
-    left: -31px;
+    left: -10px;
     border: 10px solid transparent;
     top: -9999px;
-    padding: 5px 0px 0px;
+    padding: 0px;
     display: block;
     opacity: 0;
-
     transition: opacity ease 0.2s;
 }
 
 #header .menu-item .submenu-item{
 
-    font-size: 1.5em;
+    font-size: 1.1em;
     padding: 0.3em 0.5em;
     transition: background-color ease 0.2s, color ease 0.2s;
+    margin-top: 5px;
 }
 
 #header .title{
@@ -98,10 +100,12 @@
     #header .title{
         display: block;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     #header .menu{
         position:static;
+        padding-left: 10px;
     }
 
  }
