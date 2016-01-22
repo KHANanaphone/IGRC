@@ -92,3 +92,16 @@
     font-size: 1.2em;
     padding-top: 0.5em;
 }
+
+@media (max-width:768px) {
+
+    #header .title{
+        display: block;
+        text-align: center;
+    }
+
+    #header .menu{
+        position:static;
+    }
+
+ }
