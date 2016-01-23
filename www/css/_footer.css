@@ -1,0 +1,68 @@
+#footer {
+
+    font-family: 'Raleway', sans-serif;
+    background-color: #222;
+    padding: 1em;
+    margin-top: 2em;
+    color: white;
+    border-top: 5px solid #AAA;
+}
+
+#footer .menu {
+
+    margin-bottom: 0;
+}
+
+#footer .menu-item{
+
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    list-style-type: none;
+
+        color: #777;
+}
+
+#footer .menu-item:hover{
+
+    color: #9EFF9E;
+}
+
+#footer .contacts {
+
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 0.8em;
+        color: #CCC;
+}
+
+#footer .contacts i{
+
+    font-size: 1.5em;
+    padding: 0.5em 0.5em;
+
+}
+
+#footer .hoverglow{
+
+    transition: color 0.4s ease;
+    cursor: pointer;
+}
+
+#footer .hoverglow:hover{
+    color: #9EFF9E;
+}
+
+#footer .credits {
+
+    color: #777;
+    text-align: right;
+}
+
+@media (max-width:768px) {
+
+    #footer .credits {
+
+        text-align: center;
+    }
+ }

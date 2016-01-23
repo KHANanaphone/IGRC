@@ -1,0 +1,28 @@
+<div class='clearfix'>
+
+    <div class="col-sm-4 hidden-xs">
+
+        <ul class='menu'>
+            <li class='menu-item hoverglow'
+                ng-repeat='(pagename,page) in pages'
+                ng-class='{active: isActive(page)}'
+                ng-click='redirect(page.url)'>
+
+                    {{page.name}}
+
+            </li>
+        </ul>
+    </div>
+
+    <div class="contacts col-xs-12 col-sm-4">
+        Follow us!<br/>
+        <i class="hoverglow fa fa-twitter"></i>
+        <i class="hoverglow fa fa-facebook"></i>
+        <i class="hoverglow fa fa-google-plus"></i>
+    </div>
+
+    <div class="credits col-xs-12 col-sm-4">
+        Copyright © IGRC Corp. or whatever <br/>
+        Powered by la dee da
+    </div>
+</div>
