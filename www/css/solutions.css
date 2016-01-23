@@ -1,0 +1,54 @@
+#solutions .splash,
+#solutions .services{
+
+    text-align: center;
+}
+
+#solutions .splash {
+
+    background-image: url("/images/binding-dark.png");
+    background-color: #8D8EAD;
+    color: white;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    height: 150px;
+    padding-top: 63px;
+
+    border-bottom: 10px solid #AAA;
+    margin-bottom: 20px;
+}
+
+
+#solutions .splash span{
+
+    font-weight: 300;
+}
+
+#solutions .service .title{
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+#solutions .service{
+
+    color: #BBB;
+    transition: color 0.3s ease;
+}
+
+#solutions .service .icon{
+
+    transition: opacity 0.3s ease;
+}
+
+#solutions .service:hover .icon{
+    opacity: 1;
+}
+
+#solutions .service:hover{
+
+    color: black;
+}

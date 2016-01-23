@@ -5,3 +5,41 @@ html, body {
 
     margin: 0 auto;
 }
+
+.service{
+    cursor: pointer;
+    transition: 0.3s ease;
+    transition-property: background-color, border-color;
+    padding: 20px;
+    border: 1px dotted transparent;
+
+    min-height: 200px;
+}
+
+.service .icon{
+
+    height: 50px;
+    margin-bottom: 30px;
+    opacity: 0.5;
+}
+
+.service .icon svg{
+
+    height: 100%;
+}
+
+.service-desc{
+
+    font-size: 1.1em;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 10px;
+}
+
+.bar {
+
+    width: 15%;
+    display: block;
+    border-bottom: 1px solid #8D90CD;
+    margin: 2em auto;
+}

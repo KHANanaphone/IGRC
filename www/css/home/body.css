@@ -1,0 +1,31 @@
+#home .services {
+
+    font-family: 'Arimo', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+#home .services h1{
+
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.7em;
+
+    margin: 20px;
+}
+
+
+#home .services .title {
+
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+#home .service:hover{
+
+    background-color: #9DFFD0;
+    border-color: green;
+}
