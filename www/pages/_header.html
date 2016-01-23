@@ -5,7 +5,7 @@
 
 <ul class="menu">
     <li class='menu-item'
-        ng-repeat='page in pages track by $index'
+        ng-repeat='(pagename,page) in pages'
         ng-class='{active: isActive(page)}'>
 
         <span ng-if='!page.subpages'

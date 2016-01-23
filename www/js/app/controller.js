@@ -1,30 +1,36 @@
-app.controller('igrcController', ['$scope', '$location', function($scope, $location){
+(function(){
 
-    $scope.redirect = function(page){
+    var app = angular.module('igrcApp');
 
-        $location.url('/' + page);
-    };
+    app.controller('igrcController', ['$scope', '$location', function($scope, $location){
 
-    $scope.pages = app.pages;
+        $scope.redirect = function(page){
 
-    $scope.isActive = function(page){
+            $location.url('/' + page);
+        };
 
-        var path = $location.path();
+        $scope.pages = app.pages;
 
-        if(areEqual(page, path))
-            return true;
-        // else if(page.subpages)
-        //     for(var i = 0; i < page.subpages.length; i++)
-        //         if(areEqual(page.subpages[i], path))
-        //             return true;
+        $scope.isActive = function(page){
 
-        return false;
+            var path = $location.path();
 
-        function areEqual(page, path){
-            return page.name && path.substr(1, page.url.length + 1) === page.url
-        }
-    };
+            if(areEqual(page, path))
+                return true;
+            // else if(page.subpages)
+            //     for(var i = 0; i < page.subpages.length; i++)
+            //         if(areEqual(page.subpages[i], path))
+            //             return true;
 
-    $scope.isArray = angular.isArray;
+            return false;
 
-}]);
+            function areEqual(page, path){
+                return page.name && path.substr(1, page.url.length + 1) === page.url
+            }
+        };
+
+        $scope.isArray = angular.isArray;
+
+    }]);
+
+})();

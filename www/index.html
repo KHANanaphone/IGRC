@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- inject:css -->
+    <link rel="stylesheet" href="/css/home/solutions.css">
+    <link rel="stylesheet" href="/css/home/splash.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/_header.css">
@@ -21,12 +23,16 @@
         </div>
 
         <div ng-view>
+
+        <div id="footer" ng-include='"pages/_footer.html"'>
+        </div>
     </div>
 
     <!-- inject:js -->
     <script src="/js/components/angular/angular.js"></script>
     <script src="/js/components/angular-route/angular-route.js"></script>
     <script src="/js/components/ui-bootstrap-tpls-1.1.0.min.js"></script>
+    <script src="/js/components/ngFitText/ng-FitText.min.js"></script>
     <script src="/js/app/app.js"></script>
     <script src="/js/app/controller.js"></script>
     <!-- endinject -->
