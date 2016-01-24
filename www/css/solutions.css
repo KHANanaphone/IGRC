@@ -4,6 +4,10 @@
     text-align: center;
 }
 
+#solutions{
+
+}
+
 #solutions .splash {
 
     background-image: url("/images/binding-dark.png");
@@ -51,4 +55,24 @@
 #solutions .service:hover{
 
     color: black;
+}
+
+#web .picture {
+
+    background-image: url('/images/sample.png');
+}
+
+#bio .picture {
+
+    background-image: url('/images/sample.png');
+}
+
+#third .picture {
+
+    background-image: url('/images/sample.png');
+}
+
+#stats .picture {
+
+    background-image: url('/images/sample.png');
 }

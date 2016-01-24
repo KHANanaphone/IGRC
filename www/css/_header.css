@@ -7,8 +7,9 @@
     border-bottom: 3px solid #AAA;
     padding-bottom: 2px;
 
-    position: fixed;
+    /*position: fixed;
     z-index: 10;
+    top: 0;*/
 }
 
 #header .menu{
@@ -108,8 +109,12 @@
     }
 
     #header .menu{
-        position:static;
-        padding-left: 10px;
+        position: static;
+        text-align: center;
+    }
+
+    #header .menu-item{
+        font-size: 1em;
     }
 
  }
