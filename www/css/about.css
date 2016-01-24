@@ -1,0 +1,27 @@
+.sidebar {
+
+    border-left: 1px solid #CCC;
+    font-size: 0.9em;
+    color: #CCC;
+    text-align: center;
+}
+
+.sidebar p{
+    text-align: left;
+}
+
+.about-text h1{
+
+    margin-bottom: 30px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.sidebar img {
+    margin-bottom: 20px;
+}
+
+.about-text {
+
+    font-family: 'Arimo', sans-serif;
+}
